@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <vector>
+#include <tuple>
 
 namespace sdbq
 {
@@ -21,5 +23,27 @@ namespace sdbq
 		std::string division_name;
 		std::string school_name;
 	};
+
+	using Student = std::pair<std::string, std::string>;
+	using QuestionMeta = std::tuple<std::string, std::string, Student>;
+
+	enum MetaKey
+	{
+		KMetaKey_Difficulty = 0,
+		KMetaKey_Response = 1,
+		KMetaKey_Student = 2
+	};
+
+	struct QuestionStats
+	{
+		std::string difficulty;
+		std::string descriptor;
+		std::vector<Student> total_correct;
+		std::vector<Student> total_incorrect;
+		std::vector<Student> unique_correct;
+		std::vector<Student> unique_incorrect;
+	};
+
+
 
 }

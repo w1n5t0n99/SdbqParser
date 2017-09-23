@@ -1,0 +1,59 @@
+Compare fractions or mixed numbers. | H | Total Correct: 39 Total Incorrect: 72 Unique Correct: 35 Unique Incorrect: 55
+Construct or interpret a bar graph. | M | Total Correct: 64 Total Incorrect: 70 Unique Correct: 63 Unique Incorrect: 54
+Demonstrate equality in equations. | L | Total Correct: 39 Total Incorrect: 50 Unique Correct: 39 Unique Incorrect: 45
+Demonstrate understanding of the measure of liquid volume. | M | Total Correct: 8 Total Incorrect: 7 Unique Correct: 8 Unique Incorrect: 7
+Describe geometric figures and their properties. | L | Total Correct: 61 Total Incorrect: 27 Unique Correct: 50 Unique Incorrect: 21
+Describe points, lines, line segments, rays, and angles. | H | Total Correct: 39 Total Incorrect: 43 Unique Correct: 36 Unique Incorrect: 41
+Determine and represent the outcomes of events using fractional representations from 0 to 1, including representations on a number line. | M | Total Correct: 93 Total Incorrect: 113 Unique Correct: 70 Unique Incorrect: 78
+Determine appropriate units for measuring length. | L | Total Correct: 5 Total Incorrect: 7 Unique Correct: 5 Unique Incorrect: 7
+Determine elapsed time. | M | Total Correct: 76 Total Incorrect: 48 Unique Correct: 73 Unique Incorrect: 43
+Estimate measures for objects using appropriate units for length. | M | Total Correct: 9 Total Incorrect: 18 Unique Correct: 9 Unique Incorrect: 18
+Estimate measures for objects using appropriate units for weight/mass. | L | Total Correct: 18 Total Incorrect: 14 Unique Correct: 18 Unique Incorrect: 14
+Identify and recognize congruent images resulting from transformations. | M | Total Correct: 75 Total Incorrect: 52 Unique Correct: 61 Unique Incorrect: 41
+Identify equivalent measures using appropriate units for length. | M | Total Correct: 52 Total Incorrect: 50 Unique Correct: 49 Unique Incorrect: 45
+Identify equivalent measures using appropriate units for liquid volume. | L | Total Correct: 19 Total Incorrect: 18 Unique Correct: 18 Unique Incorrect: 18
+Identify equivalent measures using appropriate units for weight/mass. | M | Total Correct: 22 Total Incorrect: 29 Unique Correct: 20 Unique Incorrect: 28
+Identify place and value of digits in decimals. | L | Total Correct: 22 Total Incorrect: 7 Unique Correct: 22 Unique Incorrect: 7
+Identify place and value of digits in whole numbers. | L | Total Correct: 1 Total Incorrect: 1 Unique Correct: 1 Unique Incorrect: 1
+Identify representations of geometric figures, including polygons. | M | Total Correct: 106 Total Incorrect: 76 Unique Correct: 75 Unique Incorrect: 58
+Identify representations of lines that illustrate parallelism, perpendicularity, and intersection. | L | Total Correct: 69 Total Incorrect: 36 Unique Correct: 64 Unique Incorrect: 31
+Identify the decimal represented by a model. | M | Total Correct: 3 Total Incorrect: 2 Unique Correct: 3 Unique Incorrect: 2
+Identify the relationship between fraction and division statements. | H | Total Correct: 10 Total Incorrect: 20 Unique Correct: 10 Unique Incorrect: 20
+Interpret data from a line graph. | M | Total Correct: 52 Total Incorrect: 88 Unique Correct: 49 Unique Incorrect: 68
+Measure objects using appropriate units for length. | L | Total Correct: 23 Total Incorrect: 40 Unique Correct: 23 Unique Incorrect: 37
+Order a set of decimals. | H | Total Correct: 41 Total Incorrect: 22 Unique Correct: 39 Unique Incorrect: 21
+Order a set of fractions or mixed numbers. | M | Total Correct: 50 Total Incorrect: 16 Unique Correct: 40 Unique Incorrect: 15
+Predict the likelihood of outcomes of a simple event. | M | Total Correct: 29 Total Incorrect: 39 Unique Correct: 29 Unique Incorrect: 34
+Recognize and extend patterns. | L | Total Correct: 144 Total Incorrect: 165 Unique Correct: 80 Unique Incorrect: 84
+Recognize congruent and noncongruent figures. | H | Total Correct: 23 Total Incorrect: 46 Unique Correct: 22 Unique Incorrect: 41
+Recognize or apply the use of the associative property of addition or multiplication. | M | Total Correct: 31 Total Incorrect: 15 Unique Correct: 27 Unique Incorrect: 14
+Represent equivalent fractions using models. | M | Total Correct: 96 Total Incorrect: 97 Unique Correct: 70 Unique Incorrect: 66
+Represent fraction/decimal equivalence using models. | H | Total Correct: 73 Total Incorrect: 104 Unique Correct: 56 Unique Incorrect: 72
+Use the place value structure to compare decimals without models. | M | Total Correct: 66 Total Incorrect: 59 Unique Correct: 54 Unique Incorrect: 48
+Use the place value structure to compare whole numbers without models. | M | Total Correct: 55 Total Incorrect: 29 Unique Correct: 52 Unique Incorrect: 26
+Use the place value structure to read and write decimals. | L | Total Correct: 12 Total Incorrect: 6 Unique Correct: 12 Unique Incorrect: 6
+Use the place value structure to read and write whole numbers. | L | Total Correct: 22 Total Incorrect: 19 Unique Correct: 21 Unique Incorrect: 18
+Use the place value structure to round decimals. | M | Total Correct: 17 Total Incorrect: 18 Unique Correct: 16 Unique Incorrect: 16
+Use the place value structure to round whole numbers. | M | Total Correct: 84 Total Incorrect: 53 Unique Correct: 69 Unique Incorrect: 45
+‡ Estimate solutions to problems involving addition of whole numbers. | L | Total Correct: 19 Total Incorrect: 15 Unique Correct: 18 Unique Incorrect: 15
+‡ Estimate solutions to problems involving division of whole numbers. | L | Total Correct: 13 Total Incorrect: 12 Unique Correct: 13 Unique Incorrect: 10
+‡ Estimate solutions to problems involving multiplication of whole numbers. | M | Total Correct: 42 Total Incorrect: 30 Unique Correct: 41 Unique Incorrect: 28
+‡ Estimate solutions to problems involving subtraction of whole numbers. | M | Total Correct: 19 Total Incorrect: 7 Unique Correct: 19 Unique Incorrect: 7
+‡ Find common factors of up to three numbers, including the greatest common factor. | M | Total Correct: 71 Total Incorrect: 32 Unique Correct: 67 Unique Incorrect: 31
+‡ Find common multiples of up to three numbers, including the least common multiple. | M | Total Correct: 49 Total Incorrect: 38 Unique Correct: 48 Unique Incorrect: 36
+‡ Solve addition or subtraction problems with decimals. | M | Total Correct: 38 Total Incorrect: 27 Unique Correct: 36 Unique Incorrect: 27
+‡ Solve addition or subtraction problems with fractions. | L | Total Correct: 29 Total Incorrect: 27 Unique Correct: 27 Unique Incorrect: 25
+‡ Solve addition problems with whole numbers. | L | Total Correct: 3 Total Incorrect: 3 Unique Correct: 3 Unique Incorrect: 3
+‡ Solve multistep practical problems involving whole numbers. | M | Total Correct: 112 Total Incorrect: 75 Unique Correct: 75 Unique Incorrect: 58
+‡ Solve practical problems involving addition and subtraction of decimals. | M | Total Correct: 69 Total Incorrect: 75 Unique Correct: 56 Unique Incorrect: 59
+‡ Solve practical problems involving addition and subtraction of fractions. | M | Total Correct: 12 Total Incorrect: 36 Unique Correct: 11 Unique Incorrect: 35
+‡ Solve practical problems involving addition of two or more decimals. | L | Total Correct: 10 Total Incorrect: 7 Unique Correct: 10 Unique Incorrect: 7
+‡ Solve practical problems involving addition of two or more whole numbers. | L | Total Correct: 1 Total Incorrect: 1 Unique Correct: 1 Unique Incorrect: 1
+‡ Solve practical problems involving multiplication of whole numbers. | L | Total Correct: 1 Total Incorrect: 0 Unique Correct: 1 Unique Incorrect: 0
+‡ Solve practical problems involving subtraction of decimals. | L | Total Correct: 32 Total Incorrect: 11 Unique Correct: 32 Unique Incorrect: 11
+‡ Solve practical problems involving subtraction of fractions. | M | Total Correct: 6 Total Incorrect: 5 Unique Correct: 6 Unique Incorrect: 5
+‡ Solve practical problems involving subtraction of whole numbers. | M | Total Correct: 2 Total Incorrect: 0 Unique Correct: 2 Unique Incorrect: 0
+‡ Solve practical problems involving the addition of two or more fractions. | L | Total Correct: 33 Total Incorrect: 9 Unique Correct: 31 Unique Incorrect: 9
+‡ Solve problems involving division of whole numbers. | H | Total Correct: 93 Total Incorrect: 37 Unique Correct: 82 Unique Incorrect: 31
+‡ Solve problems with whole numbers involving more than one operation. | L | Total Correct: 0 Total Incorrect: 3 Unique Correct: 0 Unique Incorrect: 3
+‡ Solve subtraction problems with whole numbers. | L | Total Correct: 10 Total Incorrect: 2 Unique Correct: 10 Unique Incorrect: 2

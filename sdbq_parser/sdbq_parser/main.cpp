@@ -8,49 +8,14 @@
 
 int main()
 {
+	using LogStream = std::ofstream;
 
-	/*
-	io::CSVReader<5, typename io::trim_chars<' ', '\t'>, typename io::double_quote_escape<',', '\"'> > in("RCE Spring 17 SDBQ.csv");
-	in.read_header(io::ignore_extra_column, "Last Name", "First Name", "MI", "Item Descriptor", "Response");
-	std::string last_name = {};
-	std::string first_name = {};
-	std::string middle_initial = {};
-	std::string item_descriptor = {};
-	std::string response = {};
-	int index = 0;
+	LogStream log("test_results.txt");
 
-	while (in.read_row(last_name, first_name, middle_initial, item_descriptor, response))
-	{
-		if (last_name.find("WISE") != std::string::npos && first_name.find("JOSEPH") != std::string::npos)
-			std::cout << ++index << " " << last_name << " " << first_name << " " << item_descriptor << " " << response << std::endl;
-	}
-	*/
-
-	/*
-	int grade = 4;
-	auto questions = sdbq::ParseByGrade("RCE Spring 17 SDBQ.csv", grade);
-
-	std::ofstream file("sdbq-results.txt");
-	*/
-
-	auto questions = sdbq::ParseSdbq("RCE Spring 17 SDBQ.csv");
+	auto questions = sdbq::ParseSdbq("RCE Spring 17 SDBQ.csv", 50000);
 
 
 	std::cout << "Total questions found: " << questions.size() << std::endl;
-
-	/*
-	auto missed_questions = sdbq::GetMissedQuestions(questions);
-
-	file << "Missed questions found: " << missed_questions.size() << " in grade " << grade << " Math" << std::endl;
-
-	sdbq::SortByQuestionType(missed_questions);
-	auto descrip_data = sdbq::GetDescriptorData(missed_questions);
-
-
-	for (auto& d : descrip_data)
-		file << d.first << " Missed | " << d.second << std::endl;
-
-		*/
 
 	auto grades = sdbq::GetUniqueGrades(questions);
 
@@ -66,10 +31,17 @@ int main()
 
 	std::cout << std::endl;
 
-	auto gq = sdbq::GetGrade(questions, grades[0]);
+	auto gq = sdbq::GetTest(questions, "Gr 4 Math CAT");
 
+	auto stats = sdbq::GetMeta(gq);
 
-	std::cout << gq[0].grade << std::endl;
+	for (const auto& s : stats)
+	{
+		log << s.descriptor << " | " << s.difficulty << " | ";
+		log << "Total Correct: " << s.total_correct.size() << " Total Incorrect: " << s.total_incorrect.size() << " ";
+		log << "Unique Correct: " << s.unique_correct.size() << " Unique Incorrect: " << s.unique_incorrect.size() << std::endl;
+	}
+
 
 	std::cout << "\nFinished!\n";
 	std::cin.get();

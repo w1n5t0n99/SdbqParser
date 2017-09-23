@@ -1,9 +1,5 @@
-﻿  sdbq_parser.cpp
-c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(169): warning C4244: 'return': conversion from 'std::streamsize' to 'int', possible loss of data
-c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(185): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-  main.cpp
-c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(169): warning C4244: 'return': conversion from 'std::streamsize' to 'int', possible loss of data
-c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(185): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-  Generating Code...
-  sdbq_parser.vcxproj -> C:\Users\relam\Documents\projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.exe
-  sdbq_parser.vcxproj -> C:\Users\relam\Documents\projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.pdb (Partial PDB)
+﻿  main.cpp
+c:\users\reede\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(169): warning C4244: 'return': conversion from 'std::streamsize' to 'int', possible loss of data
+c:\users\reede\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(185): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+  sdbq_parser.vcxproj -> C:\Users\reede\Documents\Projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.exe
+  sdbq_parser.vcxproj -> C:\Users\reede\Documents\Projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.pdb (Partial PDB)
