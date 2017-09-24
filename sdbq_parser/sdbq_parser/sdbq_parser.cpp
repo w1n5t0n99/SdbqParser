@@ -12,22 +12,12 @@ namespace sdbq
 
 	struct QuestionDescriptorHasher
 	{
-		size_t operator() (const Question& val) const	{ return std::hash<std::string>()(val.descriptor); }
+		size_t operator() (const Question& val) const	{ return std::hash<std::string>()(val.descriptor+val.difficulty); }
 	};
 
 	struct QuestionDescriptorComparer
 	{
-		bool operator() (const Question& lhs, const Question& rhs) const { return lhs.descriptor == rhs.descriptor; };
-	};
-
-	struct StudentHasher
-	{
-		size_t operator() (const Student& val) const { return std::hash<std::string>()(val.first+val.second); }
-	};
-
-	struct StudentComparer
-	{
-		bool operator() (const Student& lhs, const Student& rhs) const { return (lhs.first == rhs.first) & (lhs.second == rhs.second); };
+		bool operator() (const Question& lhs, const Question& rhs) const { return (lhs.descriptor == rhs.descriptor) & (lhs.difficulty == rhs.difficulty); };
 	};
 
 	struct QuestionTestHasher
@@ -55,7 +45,7 @@ namespace sdbq
 		std::vector<Question> questions;
 		questions.reserve(count_estimate);
 
-		io::CSVReader<11, typename io::trim_chars<' ', '\t'>, typename io::double_quote_escape<',', '\"'> > in("RCE Spring 17 SDBQ.csv");
+		io::CSVReader<12, typename io::trim_chars<' ', '\t'>, typename io::double_quote_escape<',', '\"'> > in("RCE Spring 17 SDBQ.csv");
 		in.read_header(io::ignore_extra_column,
 			"Last Name",
 			"First Name",
@@ -65,6 +55,7 @@ namespace sdbq
 			"Sch Name",
 			"Group Name",
 			"Test",
+			"Retest",
 			"Item Descriptor",
 			"Item Difficulty",
 			"Response");
@@ -82,6 +73,7 @@ namespace sdbq
 
 		std::string grade_str = {};
 		std::string test_name = {};
+		std::string retest = {};
 		std::string group_name = {};
 
 		while (in.read_row(
@@ -93,12 +85,13 @@ namespace sdbq
 			school_name,
 			group_name,
 			test_name,
+			retest,
 			item_descriptor,
 			difficulty,
 			response))
 		{
 		
-			questions.push_back({ grade_str, test_name, group_name, response, difficulty, item_descriptor,
+			questions.push_back({ grade_str, test_name, retest, group_name, response, difficulty, item_descriptor,
 				last_name, first_name, middle_initial, division_name, school_name });
 		}
 
@@ -231,46 +224,52 @@ namespace sdbq
 		return incor_questions;
 	}
 
-	std::vector<QuestionStats> GetMeta(std::vector<Question>& questions)
+	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions)
 	{
-
-		std::map<std::string, std::vector<QuestionMeta>> descriptors;
+		std::vector<QuestionStats> question_stats;
+		// map the descriptor and difficulty to students
+		std::map<std::pair<std::string, std::string>, std::vector<QuestionMeta>> descriptors;
 
 		for (const auto& q : questions)
 		{
-			descriptors[q.descriptor].push_back({ q.difficulty, q.response, {q.first_name, q.last_name} });
+			descriptors[{q.descriptor, q.difficulty}].push_back({ q.retest, q.response, {q.first_name, q.last_name} });
 		}
-
-		std::vector<QuestionStats> question_stats;
 		
 		for (const auto& it : descriptors)
 		{
 			QuestionStats stats;
-			stats.descriptor = it.first;
-			std::unordered_set<Student, StudentHasher, StudentComparer> inc_students;
-			std::unordered_set<Student, StudentHasher, StudentComparer> cor_students;
+			stats.descriptor = it.first.first;
+			stats.difficulty = it.first.second;
 
-
-			for (const auto& student : it.second)
+			std::map<Student, std::string> unique_students;
+			for (const auto& meta : it.second)
 			{
-				stats.difficulty = std::get<KMetaKey_Difficulty>(student);
-				if (std::get<KMetaKey_Response>(student) == "COR")
+
+				const auto& res = std::get<KMetaKey_Response>(meta);
+				if (res == "COR")
 				{
-					stats.total_correct.push_back(std::get<KMetaKey_Student>(student));
-					cor_students.insert(std::get<KMetaKey_Student>(student));
+					stats.total_correct.push_back(std::get<KMetaKey_Student>(meta));
+					// we want to update an existing key to correct
+					unique_students[std::get<KMetaKey_Student>(meta)] = std::get<KMetaKey_Response>(meta);
 				}
 				else
 				{
-					stats.total_incorrect.push_back(std::get<KMetaKey_Student>(student));
-					inc_students.insert(std::get<KMetaKey_Student>(student));
+					stats.total_incorrect.push_back(std::get<KMetaKey_Student>(meta));
+					// we dont want to change an existing key to incorrect
+					unique_students.insert({ std::get<KMetaKey_Student>(meta), std::get<KMetaKey_Response>(meta) });
 				}
+
 			}
 
-			for (const auto& student : cor_students)
-				stats.unique_correct.push_back(student);
+			for (const auto& s : unique_students)
+			{
+				if(s.second == "COR")
+					stats.unique_correct.push_back(s.first);
+				else
+					stats.unique_incorrect.push_back(s.first);
+			}
 
-			for (const auto& student : inc_students)
-				stats.unique_incorrect.push_back(student);
+			std::replace(stats.descriptor.begin(), stats.descriptor.end(), ',', ';');
 
 			question_stats.push_back(stats);
 		}

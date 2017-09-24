@@ -21,6 +21,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sdbq_writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdbq_parser.h">
@@ -30,6 +33,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sdbq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdbq_writer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

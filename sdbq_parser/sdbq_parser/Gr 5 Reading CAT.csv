@@ -1,0 +1,114 @@
+descriptor,difficulty,total correct,total incorrect,unique correct,unique incorrect
+Analyze conflict within a story.,M,1,0,1,0
+Analyze outcome based on different point of view.,L,32,10,29,5
+Analyze outcome based on different point of view.,M,23,27,22,17
+Analyze story elements for characterization.,L,73,26,57,14
+Analyze story elements for characterization.,M,25,15,25,13
+Answer questions about the setting.,M,4,11,4,11
+Apply knowledge of affixes.,L,7,1,7,1
+Apply knowledge of affixes.,M,17,10,17,10
+Apply knowledge of homophones.,L,1,0,1,0
+Apply knowledge of suffixes.,L,10,2,10,2
+Categorize new information into the appropriate section.,L,6,2,6,2
+Categorize new information into the appropriate section.,M,2,5,2,5
+Compare characters; settings; and events.,L,15,4,14,3
+Compare characters; settings; and events.,M,1,0,1,0
+Demonstrate comprehension by predicting an appropriate text heading.,L,32,13,29,8
+Demonstrate comprehension by predicting an appropriate text heading.,M,16,16,15,14
+Demonstrate understanding of conflict.,L,25,7,25,7
+Demonstrate understanding of conflict.,M,16,13,16,13
+Demonstrate understanding of guide words in a dictionary.,L,14,3,14,2
+Demonstrate understanding of plot structure and resolution.,L,18,7,16,6
+Demonstrate understanding of plot structure and resolution.,M,7,10,7,10
+Demonstrate understanding of theme.,M,2,8,2,8
+Describe how an author reveals information about a character.,L,0,1,0,1
+Describe how an author's word choice contributes to the meaning of a phrase.,L,47,16,47,14
+Describe how an author's word choice contributes to the meaning of a phrase.,M,16,5,15,5
+Describe how word choice contributes to the meaning of a text.,L,3,2,3,2
+Determine a poet's feelings in a poem.,M,1,4,1,4
+Determine an author's purpose for including specific details.,L,8,4,8,4
+Determine an author's purpose for including specific details.,M,2,3,2,3
+Determine author's attitude based on details of a selection.,L,3,0,3,0
+Determine information relevant to a summary.,L,5,0,5,0
+Determine information relevant to a summary.,M,40,37,35,27
+Determine main idea of an article.,L,22,6,22,6
+Determine point of view.,L,11,2,11,2
+Determine the cause and effect relationship of details in a text.,L,4,1,4,1
+Determine the cause/effect relationship.,L,110,22,73,10
+Determine the cause/effect relationship.,M,58,48,50,25
+Determine the main idea.,L,4,1,4,1
+Determine the most relevant conclusion.,H,0,1,0,1
+Determine the most relevant conclusion.,L,13,4,13,4
+Determine the most relevant conclusion.,M,7,9,7,9
+Determine the most relevant text structure for a passage.,M,5,1,5,1
+Determine the purpose of graphics.,L,36,13,36,11
+Determine the purpose of graphics.,M,7,2,7,2
+Differentiate between fact and opinion.,L,30,16,30,15
+Differentiate between fact and opinion.,M,10,5,10,5
+Discriminate among questions being asked about a passage.,L,13,3,13,3
+Draw conclusions based on information stated in a text.,L,26,5,26,5
+Draw conclusions based on textual support.,L,16,8,12,5
+Draw conclusions based on textual support.,M,51,26,42,19
+Draw conclusions on explicit information using textual support.,L,28,4,28,4
+Draw conclusions on explicit information using textual support.,M,25,13,17,2
+Draw inferences about a character.,L,0,2,0,1
+Identify a fact from a text.,L,14,2,14,2
+Identify an opinion from a text.,L,4,2,4,2
+Identify antonyms.,H,3,9,3,9
+Identify comparison relationships.,H,3,0,3,0
+Identify comparison relationships.,L,49,11,47,10
+Identify comparison relationships.,M,20,11,20,11
+Identify context clues.,M,3,3,3,3
+Identify figurative language in text.,L,27,9,26,5
+Identify figurative language in text.,M,25,16,18,13
+Identify plot details.,L,4,4,3,3
+Identify plot details.,M,26,18,23,11
+Identify questions to be asked.,M,5,4,5,4
+Identify roots and affixes within words.,L,30,2,30,2
+Identify roots and affixes within words.,M,9,11,9,11
+Identify supporting details.,H,1,2,1,2
+Identify supporting details.,L,56,20,43,10
+Identify supporting details.,M,48,42,37,22
+Identify synonyms.,L,5,2,5,2
+Identify synonyms.,M,30,27,30,27
+Identify the author's organizational pattern.,H,8,9,8,9
+Identify the author's organizational pattern.,L,68,27,58,14
+Identify the author's organizational pattern.,M,12,13,12,13
+Identify the correct sequence for a detail.,L,2,0,2,0
+Identify the main idea.,L,39,12,38,8
+Identify the main idea.,M,70,35,56,18
+Infer an author's opinion using text as support.,L,11,3,11,3
+Interpret figurative language in text.,L,3,2,3,2
+Locate explicitly stated information within a passage.,L,33,2,33,2
+Locate explicitly stated information within a passage.,M,18,9,18,9
+Locate information in a passage to support conclusions.,L,6,3,6,3
+Locate information in a passage to support conclusions.,M,42,27,37,19
+Locate information in a text that does not support a given conclusion.,M,2,1,2,1
+Make inferences on implied information using textual support.,L,34,11,30,10
+Make inferences on implied information using textual support.,M,4,1,4,1
+Make predictions.,L,77,19,64,9
+Make predictions.,M,19,8,19,8
+Summarize a text.,M,3,3,3,3
+Summarize details in the correct sequence.,H,1,1,1,1
+Summarize details in the correct sequence.,L,1,3,1,3
+Summarize details in the correct sequence.,M,10,17,9,17
+Summarize major point.,L,24,4,24,4
+Summarize text relating supporting details.,L,14,8,14,7
+Summarize text relating supporting details.,M,22,19,21,15
+Summarize the content of a paragraph.,M,4,2,2,1
+Summarize the content of a selection.,M,0,1,0,1
+Understand the impact of characters on a plot.,L,3,0,3,0
+Understand the purpose of text structures.,L,0,1,0,1
+Use author's word choice to infer characterization.,H,0,1,0,1
+Use author's word choice to infer characterization.,L,24,2,24,1
+Use author's word choice to infer characterization.,M,12,10,12,10
+Use characterization to draw conclusions.,L,5,4,5,4
+Use context in a passage to determine word meaning.,L,1,2,1,2
+Use context to determine meanings of words.,H,1,2,1,2
+Use context to determine meanings of words.,L,93,28,75,11
+Use context to determine meanings of words.,M,33,37,30,22
+Utilize context to differentiate among multiple meanings of words.,L,3,0,3,0
+Utilize context to differentiate among multiple meanings of words.,M,6,1,6,1
+Utilize context to identify the appropriate word meaning in a dictionary entry.,L,32,11,32,10
+Utilize context to identify the appropriate word meaning in a dictionary entry.,M,2,7,2,7
+Utilize context to identify the best synonym from a thesaurus entry.,L,4,1,4,1

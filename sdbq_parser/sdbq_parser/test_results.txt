@@ -1,59 +1,104 @@
-Compare fractions or mixed numbers. | H | Total Correct: 39 Total Incorrect: 72 Unique Correct: 35 Unique Incorrect: 55
-Construct or interpret a bar graph. | M | Total Correct: 64 Total Incorrect: 70 Unique Correct: 63 Unique Incorrect: 54
-Demonstrate equality in equations. | L | Total Correct: 39 Total Incorrect: 50 Unique Correct: 39 Unique Incorrect: 45
-Demonstrate understanding of the measure of liquid volume. | M | Total Correct: 8 Total Incorrect: 7 Unique Correct: 8 Unique Incorrect: 7
-Describe geometric figures and their properties. | L | Total Correct: 61 Total Incorrect: 27 Unique Correct: 50 Unique Incorrect: 21
-Describe points, lines, line segments, rays, and angles. | H | Total Correct: 39 Total Incorrect: 43 Unique Correct: 36 Unique Incorrect: 41
-Determine and represent the outcomes of events using fractional representations from 0 to 1, including representations on a number line. | M | Total Correct: 93 Total Incorrect: 113 Unique Correct: 70 Unique Incorrect: 78
-Determine appropriate units for measuring length. | L | Total Correct: 5 Total Incorrect: 7 Unique Correct: 5 Unique Incorrect: 7
-Determine elapsed time. | M | Total Correct: 76 Total Incorrect: 48 Unique Correct: 73 Unique Incorrect: 43
-Estimate measures for objects using appropriate units for length. | M | Total Correct: 9 Total Incorrect: 18 Unique Correct: 9 Unique Incorrect: 18
-Estimate measures for objects using appropriate units for weight/mass. | L | Total Correct: 18 Total Incorrect: 14 Unique Correct: 18 Unique Incorrect: 14
-Identify and recognize congruent images resulting from transformations. | M | Total Correct: 75 Total Incorrect: 52 Unique Correct: 61 Unique Incorrect: 41
-Identify equivalent measures using appropriate units for length. | M | Total Correct: 52 Total Incorrect: 50 Unique Correct: 49 Unique Incorrect: 45
-Identify equivalent measures using appropriate units for liquid volume. | L | Total Correct: 19 Total Incorrect: 18 Unique Correct: 18 Unique Incorrect: 18
-Identify equivalent measures using appropriate units for weight/mass. | M | Total Correct: 22 Total Incorrect: 29 Unique Correct: 20 Unique Incorrect: 28
-Identify place and value of digits in decimals. | L | Total Correct: 22 Total Incorrect: 7 Unique Correct: 22 Unique Incorrect: 7
-Identify place and value of digits in whole numbers. | L | Total Correct: 1 Total Incorrect: 1 Unique Correct: 1 Unique Incorrect: 1
-Identify representations of geometric figures, including polygons. | M | Total Correct: 106 Total Incorrect: 76 Unique Correct: 75 Unique Incorrect: 58
-Identify representations of lines that illustrate parallelism, perpendicularity, and intersection. | L | Total Correct: 69 Total Incorrect: 36 Unique Correct: 64 Unique Incorrect: 31
-Identify the decimal represented by a model. | M | Total Correct: 3 Total Incorrect: 2 Unique Correct: 3 Unique Incorrect: 2
-Identify the relationship between fraction and division statements. | H | Total Correct: 10 Total Incorrect: 20 Unique Correct: 10 Unique Incorrect: 20
-Interpret data from a line graph. | M | Total Correct: 52 Total Incorrect: 88 Unique Correct: 49 Unique Incorrect: 68
-Measure objects using appropriate units for length. | L | Total Correct: 23 Total Incorrect: 40 Unique Correct: 23 Unique Incorrect: 37
-Order a set of decimals. | H | Total Correct: 41 Total Incorrect: 22 Unique Correct: 39 Unique Incorrect: 21
-Order a set of fractions or mixed numbers. | M | Total Correct: 50 Total Incorrect: 16 Unique Correct: 40 Unique Incorrect: 15
-Predict the likelihood of outcomes of a simple event. | M | Total Correct: 29 Total Incorrect: 39 Unique Correct: 29 Unique Incorrect: 34
-Recognize and extend patterns. | L | Total Correct: 144 Total Incorrect: 165 Unique Correct: 80 Unique Incorrect: 84
-Recognize congruent and noncongruent figures. | H | Total Correct: 23 Total Incorrect: 46 Unique Correct: 22 Unique Incorrect: 41
-Recognize or apply the use of the associative property of addition or multiplication. | M | Total Correct: 31 Total Incorrect: 15 Unique Correct: 27 Unique Incorrect: 14
-Represent equivalent fractions using models. | M | Total Correct: 96 Total Incorrect: 97 Unique Correct: 70 Unique Incorrect: 66
-Represent fraction/decimal equivalence using models. | H | Total Correct: 73 Total Incorrect: 104 Unique Correct: 56 Unique Incorrect: 72
-Use the place value structure to compare decimals without models. | M | Total Correct: 66 Total Incorrect: 59 Unique Correct: 54 Unique Incorrect: 48
-Use the place value structure to compare whole numbers without models. | M | Total Correct: 55 Total Incorrect: 29 Unique Correct: 52 Unique Incorrect: 26
-Use the place value structure to read and write decimals. | L | Total Correct: 12 Total Incorrect: 6 Unique Correct: 12 Unique Incorrect: 6
-Use the place value structure to read and write whole numbers. | L | Total Correct: 22 Total Incorrect: 19 Unique Correct: 21 Unique Incorrect: 18
-Use the place value structure to round decimals. | M | Total Correct: 17 Total Incorrect: 18 Unique Correct: 16 Unique Incorrect: 16
-Use the place value structure to round whole numbers. | M | Total Correct: 84 Total Incorrect: 53 Unique Correct: 69 Unique Incorrect: 45
-‡ Estimate solutions to problems involving addition of whole numbers. | L | Total Correct: 19 Total Incorrect: 15 Unique Correct: 18 Unique Incorrect: 15
-‡ Estimate solutions to problems involving division of whole numbers. | L | Total Correct: 13 Total Incorrect: 12 Unique Correct: 13 Unique Incorrect: 10
-‡ Estimate solutions to problems involving multiplication of whole numbers. | M | Total Correct: 42 Total Incorrect: 30 Unique Correct: 41 Unique Incorrect: 28
-‡ Estimate solutions to problems involving subtraction of whole numbers. | M | Total Correct: 19 Total Incorrect: 7 Unique Correct: 19 Unique Incorrect: 7
-‡ Find common factors of up to three numbers, including the greatest common factor. | M | Total Correct: 71 Total Incorrect: 32 Unique Correct: 67 Unique Incorrect: 31
-‡ Find common multiples of up to three numbers, including the least common multiple. | M | Total Correct: 49 Total Incorrect: 38 Unique Correct: 48 Unique Incorrect: 36
-‡ Solve addition or subtraction problems with decimals. | M | Total Correct: 38 Total Incorrect: 27 Unique Correct: 36 Unique Incorrect: 27
-‡ Solve addition or subtraction problems with fractions. | L | Total Correct: 29 Total Incorrect: 27 Unique Correct: 27 Unique Incorrect: 25
-‡ Solve addition problems with whole numbers. | L | Total Correct: 3 Total Incorrect: 3 Unique Correct: 3 Unique Incorrect: 3
-‡ Solve multistep practical problems involving whole numbers. | M | Total Correct: 112 Total Incorrect: 75 Unique Correct: 75 Unique Incorrect: 58
-‡ Solve practical problems involving addition and subtraction of decimals. | M | Total Correct: 69 Total Incorrect: 75 Unique Correct: 56 Unique Incorrect: 59
-‡ Solve practical problems involving addition and subtraction of fractions. | M | Total Correct: 12 Total Incorrect: 36 Unique Correct: 11 Unique Incorrect: 35
-‡ Solve practical problems involving addition of two or more decimals. | L | Total Correct: 10 Total Incorrect: 7 Unique Correct: 10 Unique Incorrect: 7
-‡ Solve practical problems involving addition of two or more whole numbers. | L | Total Correct: 1 Total Incorrect: 1 Unique Correct: 1 Unique Incorrect: 1
-‡ Solve practical problems involving multiplication of whole numbers. | L | Total Correct: 1 Total Incorrect: 0 Unique Correct: 1 Unique Incorrect: 0
-‡ Solve practical problems involving subtraction of decimals. | L | Total Correct: 32 Total Incorrect: 11 Unique Correct: 32 Unique Incorrect: 11
-‡ Solve practical problems involving subtraction of fractions. | M | Total Correct: 6 Total Incorrect: 5 Unique Correct: 6 Unique Incorrect: 5
-‡ Solve practical problems involving subtraction of whole numbers. | M | Total Correct: 2 Total Incorrect: 0 Unique Correct: 2 Unique Incorrect: 0
-‡ Solve practical problems involving the addition of two or more fractions. | L | Total Correct: 33 Total Incorrect: 9 Unique Correct: 31 Unique Incorrect: 9
-‡ Solve problems involving division of whole numbers. | H | Total Correct: 93 Total Incorrect: 37 Unique Correct: 82 Unique Incorrect: 31
-‡ Solve problems with whole numbers involving more than one operation. | L | Total Correct: 0 Total Incorrect: 3 Unique Correct: 0 Unique Incorrect: 3
-‡ Solve subtraction problems with whole numbers. | L | Total Correct: 10 Total Incorrect: 2 Unique Correct: 10 Unique Incorrect: 2
+Analyze important events in a story. | L | Total Correct: 14 Total Incorrect: 2 Unique Correct: 14 Unique Incorrect: 2
+Analyze story elements for characterization. | L | Total Correct: 84 Total Incorrect: 37 Unique Correct: 70 Unique Incorrect: 17
+Analyze story elements for characterization. | M | Total Correct: 8 Total Incorrect: 5 Unique Correct: 8 Unique Incorrect: 4
+Analyze the author's purpose for writing an informational text. | L | Total Correct: 21 Total Incorrect: 1 Unique Correct: 21 Unique Incorrect: 1
+Apply knowledge of affixes. | H | Total Correct: 0 Total Incorrect: 5 Unique Correct: 0 Unique Incorrect: 5
+Apply knowledge of affixes. | L | Total Correct: 66 Total Incorrect: 12 Unique Correct: 62 Unique Incorrect: 7
+Apply knowledge of affixes. | M | Total Correct: 3 Total Incorrect: 0 Unique Correct: 3 Unique Incorrect: 0
+Apply knowledge of antonyms. | M | Total Correct: 7 Total Incorrect: 1 Unique Correct: 6 Unique Incorrect: 1
+Apply knowledge of homophones. | L | Total Correct: 13 Total Incorrect: 7 Unique Correct: 12 Unique Incorrect: 7
+Apply knowledge of homophones. | M | Total Correct: 3 Total Incorrect: 1 Unique Correct: 3 Unique Incorrect: 1
+Compare and contrast characters. | L | Total Correct: 3 Total Incorrect: 8 Unique Correct: 3 Unique Incorrect: 7
+Compare characters, settings, and events. | L | Total Correct: 51 Total Incorrect: 13 Unique Correct: 49 Unique Incorrect: 10
+Compare characters, settings, and events. | M | Total Correct: 16 Total Incorrect: 10 Unique Correct: 15 Unique Incorrect: 10
+Decode multisyllabic words. | L | Total Correct: 16 Total Incorrect: 2 Unique Correct: 16 Unique Incorrect: 2
+Decode multisyllabic words. | M | Total Correct: 3 Total Incorrect: 4 Unique Correct: 3 Unique Incorrect: 4
+Demonstrate comprehension by drawing conclusions. | L | Total Correct: 195 Total Incorrect: 57 Unique Correct: 100 Unique Incorrect: 7
+Demonstrate comprehension by drawing conclusions. | M | Total Correct: 103 Total Incorrect: 82 Unique Correct: 73 Unique Incorrect: 31
+Demonstrate comprehension by predicting an appropriate text heading. | L | Total Correct: 23 Total Incorrect: 5 Unique Correct: 23 Unique Incorrect: 5
+Demonstrate comprehension by predicting an appropriate text heading. | M | Total Correct: 8 Total Incorrect: 5 Unique Correct: 8 Unique Incorrect: 5
+Demonstrate understanding of alphabetical order. | M | Total Correct: 7 Total Incorrect: 1 Unique Correct: 7 Unique Incorrect: 1
+Demonstrate understanding of guide words in a dictionary. | H | Total Correct: 1 Total Incorrect: 0 Unique Correct: 1 Unique Incorrect: 0
+Demonstrate understanding of guide words in a dictionary. | L | Total Correct: 2 Total Incorrect: 2 Unique Correct: 2 Unique Incorrect: 2
+Demonstrate understanding of guide words in a dictionary. | M | Total Correct: 16 Total Incorrect: 4 Unique Correct: 16 Unique Incorrect: 3
+Determine a character's motivation for an action. | L | Total Correct: 6 Total Incorrect: 5 Unique Correct: 5 Unique Incorrect: 5
+Determine an author's purpose for including specific details. | L | Total Correct: 56 Total Incorrect: 19 Unique Correct: 47 Unique Incorrect: 12
+Determine an author's purpose for including specific details. | M | Total Correct: 21 Total Incorrect: 16 Unique Correct: 21 Unique Incorrect: 16
+Determine the best online reference source for a given topic. | L | Total Correct: 21 Total Incorrect: 6 Unique Correct: 21 Unique Incorrect: 5
+Determine the best online reference source for a given topic. | M | Total Correct: 7 Total Incorrect: 15 Unique Correct: 7 Unique Incorrect: 15
+Determine the purpose of graphics. | L | Total Correct: 6 Total Incorrect: 0 Unique Correct: 6 Unique Incorrect: 0
+Determine the purpose of graphics. | M | Total Correct: 7 Total Incorrect: 14 Unique Correct: 7 Unique Incorrect: 14
+Determine which question is being answered in a passage. | L | Total Correct: 15 Total Incorrect: 9 Unique Correct: 15 Unique Incorrect: 9
+Determine which question is being answered in a passage. | M | Total Correct: 44 Total Incorrect: 27 Unique Correct: 37 Unique Incorrect: 21
+Determine which question is being answered in a specific paragraph. | L | Total Correct: 30 Total Incorrect: 16 Unique Correct: 27 Unique Incorrect: 11
+Determine which question is being answered in a specific paragraph. | M | Total Correct: 18 Total Incorrect: 19 Unique Correct: 18 Unique Incorrect: 17
+Determine why the author includes a specific paragraph in a text. | M | Total Correct: 5 Total Incorrect: 1 Unique Correct: 5 Unique Incorrect: 1
+Draw conclusion based on information in text. | L | Total Correct: 4 Total Incorrect: 1 Unique Correct: 4 Unique Incorrect: 1
+Draw conclusion based on information in text. | M | Total Correct: 13 Total Incorrect: 9 Unique Correct: 13 Unique Incorrect: 9
+Draw conclusions based on information stated in a text. | L | Total Correct: 3 Total Incorrect: 0 Unique Correct: 3 Unique Incorrect: 0
+Draw conclusions from a paragraph. | L | Total Correct: 10 Total Incorrect: 1 Unique Correct: 10 Unique Incorrect: 0
+Draw conclusions. | L | Total Correct: 29 Total Incorrect: 5 Unique Correct: 28 Unique Incorrect: 5
+Identify a major point in an article. | L | Total Correct: 48 Total Incorrect: 17 Unique Correct: 43 Unique Incorrect: 12
+Identify a major point in an article. | M | Total Correct: 6 Total Incorrect: 11 Unique Correct: 6 Unique Incorrect: 10
+Identify a paragraph that answers a specific question. | L | Total Correct: 1 Total Incorrect: 0 Unique Correct: 1 Unique Incorrect: 0
+Identify a question that is answered in a selection. | L | Total Correct: 6 Total Incorrect: 1 Unique Correct: 6 Unique Incorrect: 1
+Identify a question that is answered in a selection. | M | Total Correct: 3 Total Incorrect: 1 Unique Correct: 3 Unique Incorrect: 1
+Identify antonyms. | L | Total Correct: 14 Total Incorrect: 0 Unique Correct: 14 Unique Incorrect: 0
+Identify antonyms. | M | Total Correct: 5 Total Incorrect: 6 Unique Correct: 5 Unique Incorrect: 6
+Identify author's purpose. | L | Total Correct: 41 Total Incorrect: 13 Unique Correct: 36 Unique Incorrect: 9
+Identify author's purpose. | M | Total Correct: 14 Total Incorrect: 7 Unique Correct: 14 Unique Incorrect: 7
+Identify characteristics of a biography. | L | Total Correct: 20 Total Incorrect: 17 Unique Correct: 20 Unique Incorrect: 17
+Identify characteristics of a poem. | L | Total Correct: 24 Total Incorrect: 8 Unique Correct: 24 Unique Incorrect: 8
+Identify characteristics that make a selection a biography. | L | Total Correct: 6 Total Incorrect: 1 Unique Correct: 6 Unique Incorrect: 1
+Identify context clues. | L | Total Correct: 2 Total Incorrect: 0 Unique Correct: 2 Unique Incorrect: 0
+Identify context clues. | M | Total Correct: 0 Total Incorrect: 5 Unique Correct: 0 Unique Incorrect: 5
+Identify important details in a text. | H | Total Correct: 1 Total Incorrect: 11 Unique Correct: 1 Unique Incorrect: 10
+Identify important details in a text. | L | Total Correct: 29 Total Incorrect: 10 Unique Correct: 24 Unique Incorrect: 8
+Identify important details in a text. | M | Total Correct: 3 Total Incorrect: 4 Unique Correct: 3 Unique Incorrect: 4
+Identify key words to use for an online search of a given topic. | H | Total Correct: 7 Total Incorrect: 9 Unique Correct: 7 Unique Incorrect: 8
+Identify key words to use for an online search of a given topic. | M | Total Correct: 2 Total Incorrect: 4 Unique Correct: 2 Unique Incorrect: 4
+Identify supporting details. | L | Total Correct: 225 Total Incorrect: 59 Unique Correct: 99 Unique Incorrect: 5
+Identify supporting details. | M | Total Correct: 75 Total Incorrect: 73 Unique Correct: 56 Unique Incorrect: 29
+Identify synonyms and antonyms. | M | Total Correct: 4 Total Incorrect: 1 Unique Correct: 4 Unique Incorrect: 1
+Identify synonyms. | L | Total Correct: 11 Total Incorrect: 5 Unique Correct: 11 Unique Incorrect: 4
+Identify synonyms. | M | Total Correct: 7 Total Incorrect: 8 Unique Correct: 7 Unique Incorrect: 8
+Identify the character's problem in a selection. | L | Total Correct: 16 Total Incorrect: 13 Unique Correct: 16 Unique Incorrect: 12
+Identify the main idea. | L | Total Correct: 162 Total Incorrect: 57 Unique Correct: 95 Unique Incorrect: 12
+Identify the main idea. | M | Total Correct: 53 Total Incorrect: 35 Unique Correct: 50 Unique Incorrect: 27
+Identify the problem in a story. | L | Total Correct: 19 Total Incorrect: 12 Unique Correct: 19 Unique Incorrect: 11
+Identify the problem in a story. | M | Total Correct: 1 Total Incorrect: 4 Unique Correct: 1 Unique Incorrect: 4
+Identify the problem of the story. | L | Total Correct: 7 Total Incorrect: 4 Unique Correct: 7 Unique Incorrect: 3
+Identify the purpose of a text element. | L | Total Correct: 3 Total Incorrect: 2 Unique Correct: 3 Unique Incorrect: 2
+Identify the purpose of a text element. | M | Total Correct: 1 Total Incorrect: 4 Unique Correct: 1 Unique Incorrect: 4
+Identify the purpose of an illustration. | L | Total Correct: 17 Total Incorrect: 5 Unique Correct: 17 Unique Incorrect: 5
+Identify the purpose of text features. | H | Total Correct: 2 Total Incorrect: 3 Unique Correct: 2 Unique Incorrect: 3
+Identify the purpose of text features. | L | Total Correct: 32 Total Incorrect: 5 Unique Correct: 27 Unique Incorrect: 5
+Identify the purpose of text features. | M | Total Correct: 11 Total Incorrect: 13 Unique Correct: 11 Unique Incorrect: 13
+Identify the setting of a story. | L | Total Correct: 51 Total Incorrect: 15 Unique Correct: 46 Unique Incorrect: 12
+Identify the solution in a story. | L | Total Correct: 27 Total Incorrect: 11 Unique Correct: 27 Unique Incorrect: 10
+Identify the solution in a story. | M | Total Correct: 8 Total Incorrect: 7 Unique Correct: 8 Unique Incorrect: 7
+Identify the word with a given number of syllables. | L | Total Correct: 2 Total Incorrect: 0 Unique Correct: 2 Unique Incorrect: 0
+Locate explicitly stated information within a passage. | L | Total Correct: 7 Total Incorrect: 7 Unique Correct: 7 Unique Incorrect: 7
+Locate information in a passage to answer questions. | L | Total Correct: 15 Total Incorrect: 3 Unique Correct: 15 Unique Incorrect: 3
+Locate information in a passage to answer questions. | M | Total Correct: 14 Total Incorrect: 14 Unique Correct: 13 Unique Incorrect: 13
+Locate information in an informational text. | L | Total Correct: 5 Total Incorrect: 0 Unique Correct: 5 Unique Incorrect: 0
+Locate information in an informational text. | M | Total Correct: 15 Total Incorrect: 12 Unique Correct: 14 Unique Incorrect: 11
+Make an inference based on details of a narrative. | L | Total Correct: 8 Total Incorrect: 3 Unique Correct: 7 Unique Incorrect: 3
+Make predictions. | L | Total Correct: 119 Total Incorrect: 36 Unique Correct: 91 Unique Incorrect: 15
+Make predictions. | M | Total Correct: 35 Total Incorrect: 33 Unique Correct: 28 Unique Incorrect: 20
+Summarize details from a passage. | M | Total Correct: 13 Total Incorrect: 9 Unique Correct: 13 Unique Incorrect: 8
+Summarize details in the correct sequence. | L | Total Correct: 79 Total Incorrect: 30 Unique Correct: 67 Unique Incorrect: 21
+Summarize details in the correct sequence. | M | Total Correct: 34 Total Incorrect: 49 Unique Correct: 31 Unique Incorrect: 36
+Use context clues to identify the meaning of a word. | L | Total Correct: 1 Total Incorrect: 0 Unique Correct: 1 Unique Incorrect: 0
+Use context to determine meanings of words. | L | Total Correct: 79 Total Incorrect: 42 Unique Correct: 67 Unique Incorrect: 25
+Use context to determine meanings of words. | M | Total Correct: 31 Total Incorrect: 19 Unique Correct: 31 Unique Incorrect: 18
+Use knowledge of suffixes. | M | Total Correct: 24 Total Incorrect: 4 Unique Correct: 23 Unique Incorrect: 4
+Use meaning clues and language structure to determine meanings of words. | L | Total Correct: 3 Total Incorrect: 0 Unique Correct: 3 Unique Incorrect: 0
+Use meaning clues and language structure to determine meanings of words. | M | Total Correct: 4 Total Incorrect: 1 Unique Correct: 4 Unique Incorrect: 1
+Use pictures, captions, and charts. | H | Total Correct: 0 Total Incorrect: 2 Unique Correct: 0 Unique Incorrect: 2
+Use pictures, captions, and charts. | M | Total Correct: 16 Total Incorrect: 22 Unique Correct: 16 Unique Incorrect: 21
+Use table of contents to locate information. | H | Total Correct: 10 Total Incorrect: 12 Unique Correct: 10 Unique Incorrect: 12
+Use table of contents to locate information. | L | Total Correct: 1 Total Incorrect: 2 Unique Correct: 1 Unique Incorrect: 2
+Utilize context to identify the appropriate word meaning in a dictionary entry. | L | Total Correct: 14 Total Incorrect: 6 Unique Correct: 14 Unique Incorrect: 6
+Utilize context to identify the appropriate word meaning in a dictionary entry. | M | Total Correct: 5 Total Incorrect: 11 Unique Correct: 5 Unique Incorrect: 11
+Utilize context to identify the best synonym from a thesaurus entry. | M | Total Correct: 4 Total Incorrect: 3 Unique Correct: 4 Unique Incorrect: 3

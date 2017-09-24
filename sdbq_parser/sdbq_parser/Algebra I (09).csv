@@ -1,0 +1,82 @@
+descriptor,difficulty,total correct,total incorrect,unique correct,unique incorrect
+Analyze and compare box-and-whisker plots.,M,28,9,14,2
+Apply a given field-property.,M,5,0,5,0
+Complete a relation to create a function.,L,5,0,5,0
+Completely factor a polynomial.,M,33,4,15,1
+Determine a representation of a function presented in another format.,L,16,0,16,0
+Determine a representation of a function presented in another format.,M,8,0,8,0
+Determine a z-score for a data point given statistical information.,M,16,0,16,0
+Determine the domain and range of a relation represented graphically.,M,4,1,4,1
+Determine the domain or range of a relation represented by a set of ordered pairs.,M,7,1,7,1
+Determine the domain or range of a relation represented by a set.,L,2,1,2,1
+Determine the equation of a function given its zeros.,M,6,2,6,2
+Determine the factored form of a polynomial function from its x-intercepts.,H,2,1,2,1
+Determine the graph of a function given its zeros.,L,3,0,3,0
+Determine the linear equation from its x- and y-intercepts.,H,3,2,3,2
+Determine the range of a function represented graphically.,M,2,1,2,1
+Determine the slope of a line given its graph.,M,3,0,3,0
+Determine the standard deviation of a set of data.,H,5,0,5,0
+Determine the x- and y-intercepts of a function presented graphically.,L,11,0,11,0
+Determine the x- and/or y-intercepts of a function presented algebraically.,M,13,3,13,3
+Determine the zeros of a function given the equation and the graph.,L,8,0,8,0
+Determine the zeros of a function given the equation and the graph.,M,5,0,5,0
+Determine the zeros of a function given the equation.,M,2,1,2,1
+Determine values of the domain for given values of the range.,M,11,0,11,0
+Determine values of the range for given values of the domain.,H,6,2,6,2
+Determine values of the range for given values of the domain.,M,12,1,7,1
+Determine whether a relation is a function.,L,10,1,10,1
+Determine whether a relation is a function.,M,10,3,10,3
+Divide polynomial expressions.,M,9,2,9,2
+Evaluate an expression given replacement values.,M,15,1,15,1
+Find solutions to a system of inequalities.,H,8,3,8,3
+Find solutions to a system of inequalities.,M,4,1,4,1
+Find solutions to an inequality modeled by a real-world situation.,L,13,0,13,0
+Find solutions to an inequality modeled by a real-world situation.,M,13,3,13,3
+Find the algebraic solution to a multistep inequality.,L,11,0,11,0
+Find the algebraic solution to a multistep inequality.,M,7,1,7,1
+Find the algebraic solution to a quadratic equation.,L,5,0,5,0
+Find the algebraic solution to a quadratic equation.,M,11,0,11,0
+Find the algebraic solution to a system of linear equations.,H,3,2,3,2
+Find the algebraic solution to a system of linear equations.,L,13,0,13,0
+Find the algebraic solution to a system of linear equations.,M,3,0,3,0
+Find the curve of best fit for a set of data represented graphically.,M,7,4,7,4
+Find the curve of best fit for a set of data.,H,1,2,1,2
+Find the slope of a line; given two points.,M,9,4,9,4
+Find the solution to a multistep linear equation.,L,18,1,11,0
+Find the solution to a multistep linear equation.,M,8,0,8,0
+Find the solution to a system of equations modeled by a real-world situation.,L,3,0,3,0
+Find the solution to a system of equations modeled by a real-world situation.,M,17,4,13,3
+Find the solutions to a quadratic equation given its graph.,M,10,1,10,1
+Generate the equation of a line given its graph.,L,11,0,11,0
+Generate the equation of a line given its intercepts.,M,9,2,9,2
+Generate the slope-intercept form of a line given two points.,M,5,0,5,0
+Graph a system of inequalities.,M,8,0,8,0
+Graph the solution to a two-variable inequality.,L,3,0,3,0
+Identify a field-property.,M,4,1,4,1
+Identify a property of equality.,M,2,1,2,1
+Identify a relation with a given domain.,M,3,2,3,2
+Interpret statistical measures in a real-world situation to draw a conclusion.,H,3,5,3,5
+Interpret statistical measures in a real-world situation to draw a conclusion.,M,9,2,9,2
+Justify steps when solving an equation.,M,8,0,8,0
+Justify steps when solving an inequality.,H,2,1,2,1
+Justify steps when solving an inequality.,M,17,1,12,1
+Model and make predictions for a set of data using the curve of best fit.,L,5,0,5,0
+Model and make predictions for a set of data using the curve of best fit.,M,16,5,12,1
+Multiply polynomial expressions.,L,8,0,8,0
+Multiply polynomial expressions.,M,4,1,4,1
+Perform multiplication and addition on polynomials.,H,5,0,5,0
+Represent a direct or inverse variation relationship algebraically.,L,9,2,9,2
+Represent a direct or inverse variation relationship algebraically.,M,4,1,4,1
+Represent a direct variation relationship graphically.,M,14,5,13,3
+Represent real-world quantitative situations algebraically.,M,8,3,8,3
+Simplify the cube root of a whole number.,L,13,0,13,0
+Simplify the cube root of a whole number.,M,3,0,3,0
+Simplify the square root of a monomial expression.,M,16,0,16,0
+Simplify the square root of a whole number.,M,5,0,5,0
+Solve a literal equation for a variable.,M,26,3,15,1
+Subtract polynomial expressions.,L,5,0,5,0
+Subtract polynomial expressions.,M,3,0,3,0
+Translate between verbal and algebraic expressions.,L,12,1,12,1
+Translate between verbal and algebraic expressions.,M,3,0,3,0
+Use the laws of exponents to simplify an expression.,L,8,0,8,0
+Use the laws of exponents to simplify an expression.,M,27,0,16,0

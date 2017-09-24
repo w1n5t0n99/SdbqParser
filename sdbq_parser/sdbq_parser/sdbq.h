@@ -10,6 +10,7 @@ namespace sdbq
 	{
 		std::string grade;
 		std::string test_name;
+		std::string retest;
 		std::string group_name;
 		// question
 		std::string response;
@@ -29,7 +30,7 @@ namespace sdbq
 
 	enum MetaKey
 	{
-		KMetaKey_Difficulty = 0,
+		KMetaKey_Retest = 0,
 		KMetaKey_Response = 1,
 		KMetaKey_Student = 2
 	};

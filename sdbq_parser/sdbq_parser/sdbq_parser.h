@@ -20,6 +20,6 @@ namespace sdbq
 	std::vector<Question> GetCorrectQuestions(std::vector<Question>& questions);
 	std::vector<Question> GetIncorrectQuestions(std::vector<Question>& questions);
 
-	std::vector<QuestionStats> GetMeta(std::vector<Question>& questions);
+	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions);
 
 }
