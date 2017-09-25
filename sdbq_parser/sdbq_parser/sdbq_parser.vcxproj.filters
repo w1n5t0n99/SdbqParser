@@ -38,5 +38,11 @@
     <ClInclude Include="sdbq_writer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="args.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="catch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

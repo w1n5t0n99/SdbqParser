@@ -1,6 +1,5 @@
-﻿  sdbq_parser.cpp
+﻿  main.cpp
 c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(169): warning C4244: 'return': conversion from 'std::streamsize' to 'int', possible loss of data
 c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\csv.h(185): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-c:\users\relam\documents\projects\sdbqparser\sdbq_parser\sdbq_parser\sdbq_parser.cpp(100): warning C4101: 'err': unreferenced local variable
   sdbq_parser.vcxproj -> C:\Users\relam\Documents\projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.exe
   sdbq_parser.vcxproj -> C:\Users\relam\Documents\projects\SdbqParser\sdbq_parser\Debug\sdbq_parser.pdb (Partial PDB)

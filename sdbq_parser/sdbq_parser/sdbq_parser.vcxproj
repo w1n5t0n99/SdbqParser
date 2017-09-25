@@ -118,6 +118,8 @@
     <ClCompile Include="sdbq_writer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="args.hxx" />
+    <ClInclude Include="catch.hpp" />
     <ClInclude Include="csv.h" />
     <ClInclude Include="sdbq.h" />
     <ClInclude Include="sdbq_parser.h" />
