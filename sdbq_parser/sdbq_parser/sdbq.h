@@ -26,14 +26,6 @@ namespace sdbq
 	};
 
 	using Student = std::pair<std::string, std::string>;
-	using QuestionMeta = std::tuple<std::string, std::string, Student>;
-
-	enum MetaKey
-	{
-		KMetaKey_Retest = 0,
-		KMetaKey_Response = 1,
-		KMetaKey_Student = 2
-	};
 
 	struct QuestionStats
 	{

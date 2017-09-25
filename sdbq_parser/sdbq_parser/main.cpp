@@ -1,66 +1,44 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include <fstream>
+#include <chrono>
+#include <thread>
 
 #include "csv.h"
 #include "sdbq_parser.h"
 #include "sdbq_writer.h"
 
-int main()
+int main(int argc, char** argv)
 {
-	/*
-	using LogStream = std::ofstream;
+	using namespace std::chrono_literals;
 
-	LogStream log("test_results.txt");
-
-	auto questions = sdbq::ParseSdbq("RCE Spring 17 SDBQ.csv", 50000);
-
-
-	std::cout << "Total questions found: " << questions.size() << std::endl;
-
-	auto grades = sdbq::GetUniqueGrades(questions);
-
-	for (const auto& g : grades)
-		std::cout << g << std::endl;
-		
-	auto tests = sdbq::GetUniqueTests(questions);
-
-	std::cout << std::endl;
-
-	for (const auto& t : tests)
-		std::cout << t << std::endl;
-
-	std::cout << std::endl;
-
-	auto gq = sdbq::GetTest(questions, "Gr 3 Reading CAT");
-
-	auto stats = sdbq::GetMeta(gq);
-
-	
-	for (const auto& s : stats)
+	if (argc > 2)
 	{
-		log << s.descriptor << " | " << s.difficulty << " | ";
-		log << "Total Correct: " << s.total_correct.size() << " Total Incorrect: " << s.total_incorrect.size() << " ";
-		log << "Unique Correct: " << s.unique_correct.size() << " Unique Incorrect: " << s.unique_incorrect.size() << std::endl;
+		std::cout << "Too many paramters specified!\n";
+		std::this_thread::sleep_for(1000ms);
+		return 1;
 	}
-	
+	else if (argc < 2)
+	{
+		std::cout << "No file specified\n";
+		std::this_thread::sleep_for(1000ms);
+		return 1;
+	}
 
-	auto& d = stats[3].descriptor;
-	auto& s = stats[3].total_correct;
+	std::string csv_file(argv[1]);
 
-	std::cout << d << std::endl;
-	for (auto& i : s)
-		std::cout << i.second << " " << i.first << std::endl;
-		*/
+	auto total_questions = sdbq::ParseSdbq(csv_file, 50000);
+	if (!total_questions)
+	{
+		std::cout << "File not found! - " << csv_file << "\n";
+		std::this_thread::sleep_for(1000ms);
+		return 1;
+	}
 
-	auto total_questions = sdbq::ParseSdbq("RCE Spring 17 SDBQ.csv", 50000);
-
-	auto tests = sdbq::GetUniqueTests(total_questions);
+	auto tests = sdbq::GetUniqueTests(*total_questions);
 	for (const auto& test : tests)
 	{
 		std::cout << "parsing - " << test << " ...\n";
-		auto test_questions = sdbq::GetTest(total_questions, test);
+		auto test_questions = sdbq::GetTest(*total_questions, test);
 		auto stats = sdbq::GetQuestionStats(test_questions);
 
 		sdbq::CreateStatFile(test + ".csv", stats);
@@ -68,6 +46,6 @@ int main()
 
 
 	std::cout << "\nFinished!\n";
-	std::cin.get();
+	std::this_thread::sleep_for(1000ms);
 	return 0;
 }
