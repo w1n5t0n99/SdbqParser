@@ -151,7 +151,7 @@ namespace sdbq
 		return unq_questions_vec;
 	}
 
-	std::vector<Question> GetGrade(std::vector<Question>& questions, std::string_view grade)
+	std::vector<Question> GetGradeQuestions(std::vector<Question>& questions, std::string_view grade)
 	{
 		std::vector<Question> grade_questions;
 
@@ -171,7 +171,7 @@ namespace sdbq
 		return grade_questions;
 	}
 
-	std::vector<Question> GetTest(std::vector<Question>& questions, std::string_view test_name)
+	std::vector<Question> GetTestQuestions(std::vector<Question>& questions, std::string_view test_name)
 	{
 		std::vector<Question> test_questions;
 
@@ -191,46 +191,6 @@ namespace sdbq
 		return test_questions;
 	}
 
-	std::vector<Question> GetCorrectQuestions(std::vector<Question>& questions)
-	{
-		std::vector<Question> cor_questions;
-
-		auto it = questions.begin();
-		auto end = questions.end();
-
-		while (it != end)
-		{
-			it = std::find_if(it, end, [&](const auto& val) { return val.response == "COR"; });
-			if (it != end)
-			{
-				cor_questions.push_back(*it);
-				it++;
-			}
-		}
-
-		return cor_questions;
-	}
-
-	std::vector<Question> GetIncorrectQuestions(std::vector<Question>& questions)
-	{
-		std::vector<Question> incor_questions;
-
-		auto it = questions.begin();
-		auto end = questions.end();
-
-		while (it != end)
-		{
-			it = std::find_if(it, end, [&](const auto& val) { return val.response == "INC"; });
-			if (it != end)
-			{
-				incor_questions.push_back(*it);
-				it++;
-			}
-		}
-
-		return incor_questions;
-	}
-
 	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions)
 	{
 		std::vector<QuestionStats> question_stats;
@@ -241,15 +201,15 @@ namespace sdbq
 		{
 			descriptors[{q.descriptor, q.difficulty}].push_back(q);
 		}
-		
-		for (const auto& it : descriptors)
+
+		for (const auto& [d, qs] : descriptors)
 		{
 			QuestionStats stats;
-			stats.descriptor = it.first.first;
-			stats.difficulty = it.first.second;
+			stats.descriptor = d.first;
+			stats.difficulty = d.second;
 
 			std::map<Student, std::string> unique_students;
-			for (const auto& q : it.second)
+			for (const auto& q : qs)
 			{
 
 				const auto& res = q.response;
@@ -285,6 +245,40 @@ namespace sdbq
 		}
 
 		return question_stats;
+	}
+
+	std::vector<QuestionStats> MergeQuestionStats(const std::vector<QuestionStats>& stats0, const std::vector<QuestionStats>& stats1)
+	{
+		std::vector<QuestionStats> merged_questions;
+		std::map<std::pair<std::string, std::string>, QuestionStats> question_map;
+
+		for (const auto& q : stats0)
+			question_map.insert({ {q.descriptor, q.difficulty}, q });
+
+		for (const auto& q : stats1)
+		{
+			auto& [it, success] = question_map.insert({ { q.descriptor, q.difficulty }, q });
+			
+			if (!success)
+			{
+				auto& merged_total_correct = it->second.total_correct;
+				merged_total_correct.insert(merged_total_correct.end(), q.total_correct.begin(), q.total_correct.end());
+
+				auto& merged_total_incorrect = it->second.total_incorrect;
+				merged_total_incorrect.insert(merged_total_incorrect.end(), q.total_incorrect.begin(), q.total_incorrect.end());
+
+				auto& merged_unique_correct = it->second.unique_correct;
+				merged_unique_correct.insert(merged_unique_correct.end(), q.unique_correct.begin(), q.unique_correct.end());
+
+				auto& merged_unique_incorrect = it->second.unique_incorrect;
+				merged_unique_incorrect.insert(merged_unique_incorrect.end(), q.unique_incorrect.begin(), q.unique_incorrect.end());
+			}
+		}
+
+		for (auto& s : question_map)
+			merged_questions.push_back(std::move(s.second));
+
+		return merged_questions;
 	}
 
 }

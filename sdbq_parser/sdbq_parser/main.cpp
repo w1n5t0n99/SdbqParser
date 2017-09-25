@@ -2,6 +2,7 @@
 #include <string>
 #include <chrono>
 #include <thread>
+#include <map>
 
 #include "csv.h"
 #include "sdbq_parser.h"
@@ -34,17 +35,25 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
+	std::map<std::string, std::vector<sdbq::QuestionStats>> test_map;
+
 	auto tests = sdbq::GetUniqueTests(*total_questions);
 	for (const auto& test : tests)
 	{
 		std::cout << "parsing - " << test << " ...\n";
-		auto test_questions = sdbq::GetTest(*total_questions, test);
+		auto test_questions = sdbq::GetTestQuestions(*total_questions, test);
 		auto stats = sdbq::GetQuestionStats(test_questions);
 
 		sdbq::CreateStatFile(test + ".csv", stats);
+		test_map.insert({ test, std::move(stats) });
 	}
 
+	const auto& stat0 = test_map["Gr 6 Math CAT"];
+	const auto& stat1 = test_map["Gr 6 Mathematics"];
 
+	const auto stat_merge = sdbq::MergeQuestionStats(stat0, stat1);
+	sdbq::CreateStatFile("Grade-6-Math-Total.csv", stat_merge);
+	
 	std::cout << "\nFinished!\n";
 	std::this_thread::sleep_for(1000ms);
 	return 0;

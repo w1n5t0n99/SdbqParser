@@ -16,11 +16,10 @@ namespace sdbq
 	std::vector<std::string> GetUniqueDescriptors(const std::vector<Question>& questions);
 
 
-	std::vector<Question> GetGrade(std::vector<Question>& questions, std::string_view grade);
-	std::vector<Question> GetTest(std::vector<Question>& questions, std::string_view test_name);
-	std::vector<Question> GetCorrectQuestions(std::vector<Question>& questions);
-	std::vector<Question> GetIncorrectQuestions(std::vector<Question>& questions);
+	std::vector<Question> GetGradeQuestions(std::vector<Question>& questions, std::string_view grade);
+	std::vector<Question> GetTestQuestions(std::vector<Question>& questions, std::string_view test_name);
 
 	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions);
+	std::vector<QuestionStats> MergeQuestionStats(const std::vector<QuestionStats>& stats0, const std::vector<QuestionStats>& stats1);
 
 }
