@@ -37,6 +37,14 @@ namespace sdbq
 		std::vector<Student> unique_incorrect;
 	};
 
-
+	struct MergeStats
+	{
+		std::string difficulty;
+		std::string descriptor;
+		int total_correct;
+		int total_incorrect;
+		int unique_correct;
+		int unique_incorrect;
+	};
 
 }

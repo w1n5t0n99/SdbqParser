@@ -114,6 +114,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sdbq.cpp" />
     <ClCompile Include="sdbq_parser.cpp" />
     <ClCompile Include="sdbq_writer.cpp" />
   </ItemGroup>

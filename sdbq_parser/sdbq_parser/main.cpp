@@ -7,58 +7,11 @@
 #include "csv.h"
 #include "args.hxx"
 
-#include "sdbq_parser.h"
-#include "sdbq_writer.h"
+#include "sdbq.h"
 
 int main(int argc, char** argv)
 {
 	using namespace std::chrono_literals;
-
-	/*
-
-	if (argc > 2)
-	{
-		std::cout << "Too many paramters specified!\n";
-		std::this_thread::sleep_for(1000ms);
-		return 1;
-	}
-	else if (argc < 2)
-	{
-		std::cout << "No file specified\n";
-		std::this_thread::sleep_for(1000ms);
-		return 1;
-	}
-
-	std::string csv_file(argv[1]);
-
-	auto total_questions = sdbq::ParseSdbq(csv_file, 50000);
-	if (!total_questions)
-	{
-		std::cout << "File not found! - " << csv_file << "\n";
-		std::this_thread::sleep_for(1000ms);
-		return 1;
-	}
-
-	std::map<std::string, std::vector<sdbq::QuestionStats>> test_map;
-
-	auto tests = sdbq::GetUniqueTests(*total_questions);
-	for (const auto& test : tests)
-	{
-		std::cout << "parsing - " << test << " ...\n";
-		auto test_questions = sdbq::GetTestQuestions(*total_questions, test);
-		auto stats = sdbq::GetQuestionStats(test_questions);
-
-		sdbq::CreateStatFile(test + ".csv", stats);
-		test_map.insert({ test, std::move(stats) });
-	}
-
-	const auto& stat0 = test_map["Gr 6 Math CAT"];
-	const auto& stat1 = test_map["Gr 6 Mathematics"];
-
-	const auto stat_merge = sdbq::MergeQuestionStats(stat0, stat1);
-	sdbq::CreateStatFile("Grade-6-Math-Total.csv", stat_merge);
-	
-	*/
 
 	args::ArgumentParser parser("RCPS sqdb parser.", "This goes after the options.");
 	args::HelpFlag help(parser, "help", "Display this help menu", { 'h', "help" });
@@ -69,7 +22,7 @@ int main(int argc, char** argv)
 	args::Flag merge_flag(cmd_group, "merge", "the flag to merge several results", { 'm', "merge" });
 
 	args::ValueFlag<std::string> output_value(parser, "output file name", "this is the output file to use", { 'o', "output" });
-	args::ValueFlagList<std::string> input_value(parser, "input files", "this is the file(s) to use", { 'i', "input" });
+	args::ValueFlagList<std::string> input_value(parser, "input files", "this is the input file(s) to use", { 'i', "input" });
 
 	try
 	{
@@ -113,7 +66,12 @@ int main(int argc, char** argv)
 		std::cout << "parsing... " << std::endl;
 		parse = true;
 
-		std::cout << "input: " << args::get(input_value)[0] << std::endl;
+		auto res = sdbq::Parse(args::get(input_value)[0]);
+		if(!res.first)
+		{
+			std::cerr << res.second << std::endl;
+			return 1;
+		}
 	}
 
 	if (merge_flag)
@@ -121,17 +79,28 @@ int main(int argc, char** argv)
 		std::cout << "merging... " << std::endl;
 		merge = true;
 
-		std::cout << "output: " << args::get(output_value) << std::endl;
+		if (!output_value)
+		{
+			std::cerr << "error! - no output specified" << std::endl;
+			return 1;
+		}
 
-		std::cout << "input: ";
-		for (const auto& in : args::get(input_value))
-			std::cout << in << "  ";
-		
-		std::cout << std::endl;
+		if (!input_value)
+		{
+			std::cerr << "error! - no inputs specified" << std::endl;
+			return 1;
+		}
+
+
+		auto res = sdbq::Merge(args::get(output_value), args::get(input_value));
+		if (!res.first)
+		{
+			std::cerr << res.second << std::endl;
+			return 1;
+		}
 	}
 
-	std::cout << "\nFinished!\n";
-	//std::this_thread::sleep_for(1000ms);
+	std::cout << "\nfinished!\n";
 	return 0;
 }
 

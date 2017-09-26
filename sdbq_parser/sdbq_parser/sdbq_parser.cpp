@@ -105,6 +105,49 @@ namespace sdbq
 		return questions;
 	}
 
+	std::optional<std::vector<MergeStats>> ParseResults(std::string file_name, int count_estimate)
+	{
+		std::vector<MergeStats> stats;
+		stats.reserve(count_estimate);
+
+		try
+		{
+			io::CSVReader<6, typename io::trim_chars<' ', '\t'>, typename io::double_quote_escape<',', '\"'> > in(file_name);
+			in.read_header(io::ignore_extra_column,
+				"descriptor",
+				"difficulty",
+				"total correct",
+				"total incorrect",
+				"unique correct",
+				"unique incorrect");
+			
+			std::string descriptor = {};
+			std::string difficulty = {};
+			int total_correct = {};
+			int total_incorrect = {};
+			int unique_correct = {};
+			int unique_incorrect = {};
+
+			while (in.read_row(
+				descriptor,
+				difficulty,
+				total_correct,
+				total_incorrect,
+				unique_correct,
+				unique_incorrect))
+			{
+
+				stats.push_back({ descriptor, difficulty, total_correct, total_incorrect, unique_correct, unique_incorrect });
+			}
+		}
+		catch (io::error::can_not_open_file& err)
+		{
+			return {};
+		}
+
+		return stats;
+	}
+
 	std::vector<std::string> GetUniqueGrades(const std::vector<Question>& questions)
 	{
 		std::unordered_set<Question, QuestionGradeHasher, QuestionGradeComparer> unq_questions;
