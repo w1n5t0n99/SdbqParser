@@ -1,7 +1,7 @@
 #pragma once
 #include <fstream>
 
-#include "sdbq.h"
+#include "sdbq_decls.h"
 
 namespace sdbq
 {

@@ -62,10 +62,15 @@ int main(int argc, char** argv)
 
 	args::ArgumentParser parser("RCPS sqdb parser.", "This goes after the options.");
 	args::HelpFlag help(parser, "help", "Display this help menu", { 'h', "help" });
-	args::ValueFlag<std::string> file_flag(parser, "file name", "this is the csv file to parse", { 'f' });
-	args::Group group(parser, "This group is all exclusive:", args::Group::Validators::Xor);
-	args::Flag parse_all_flag(group, "parse-all", "The flag to parse all tests", { "parse-all" });
-	
+
+	args::Group cmd_group(parser, "possible commands you can execute", args::Group::Validators::Xor);
+
+	args::Flag parse_flag(cmd_group, "parse", "the flag to parse all questions in csv", { 'p', "parse" });
+	args::Flag merge_flag(cmd_group, "merge", "the flag to merge several results", { 'm', "merge" });
+
+	args::ValueFlag<std::string> output_value(parser, "output file name", "this is the output file to use", { 'o', "output" });
+	args::ValueFlagList<std::string> input_value(parser, "input files", "this is the file(s) to use", { 'i', "input" });
+
 	try
 	{
 		parser.ParseCLI(argc, argv);
@@ -88,14 +93,45 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
-	if (file_flag)
-		std::cout << "file: " << args::get(file_flag) << std::endl;
+	bool parse = false;
+	bool merge = false;
 
-	if (parse_all_flag)
-		std::cout << "parse all tests!" << std::endl;
+	if (parse_flag)
+	{
+		if (input_value &&  args::get(input_value).size() > 1)
+		{
+			std::cerr << "error! - can only specify one input for parsing" << std::endl;
+			return 1;
+		}
+
+		if(output_value)
+		{
+			std::cerr << "error! - cannot specify output for parsing" << std::endl;
+			return 1;
+		}
+
+		std::cout << "parsing... " << std::endl;
+		parse = true;
+
+		std::cout << "input: " << args::get(input_value)[0] << std::endl;
+	}
+
+	if (merge_flag)
+	{
+		std::cout << "merging... " << std::endl;
+		merge = true;
+
+		std::cout << "output: " << args::get(output_value) << std::endl;
+
+		std::cout << "input: ";
+		for (const auto& in : args::get(input_value))
+			std::cout << in << "  ";
+		
+		std::cout << std::endl;
+	}
 
 	std::cout << "\nFinished!\n";
-	std::this_thread::sleep_for(1000ms);
+	//std::this_thread::sleep_for(1000ms);
 	return 0;
 }
 

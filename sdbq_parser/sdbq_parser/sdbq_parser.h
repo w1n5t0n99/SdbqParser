@@ -4,7 +4,7 @@
 #include <vector>
 #include <optional>
 
-#include "sdbq.h"
+#include "sdbq_decls.h"
 
 namespace sdbq
 {

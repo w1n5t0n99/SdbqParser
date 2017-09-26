@@ -1,42 +1,71 @@
 #pragma once
-#include <string>
-#include <vector>
-#include <tuple>
+#include "sdbq_decls.h"
+#include "sdbq_parser.h"
+#include "sdbq_writer.h"
 
 namespace sdbq
 {
-
-	struct Question
+	enum class ParseErrc
 	{
-		std::string grade;
-		std::string test_name;
-		std::string retest;
-		std::string group_name;
-		// question
-		std::string response;
-		std::string difficulty;
-		std::string descriptor;
-		//child 
-		std::string last_name;
-		std::string first_name;
-		std::string middle_initial;
-		// location
-		std::string division_name;
-		std::string school_name;
+		// no 0
+		CannotReadInput = 1,		// input file doest exist or malformed
 	};
 
-	using Student = std::pair<std::string, std::string>;
-
-	struct QuestionStats
+	enum class MergeErrc
 	{
-		std::string difficulty;
-		std::string descriptor;
-		std::vector<Student> total_correct;
-		std::vector<Student> total_incorrect;
-		std::vector<Student> unique_correct;
-		std::vector<Student> unique_incorrect;
+		// no 0
+		CannotReadInput = 1,		// input file doest exist or malformed
+		CannotCreateOutput = 1<<1,	// cannot create or write to output
+	};
+	
+	struct ParseErrorCategory : std::error_category
+	{
+		const char* name() const noexcept override;
+		std::string message(int ev) const override;
 	};
 
+	const char* ParseErrorCategory::name() const noexcept
+	{
+		return "Parse";
+	}
 
+	std::string ParseErrorCategory::message(int ev) const
+	{
+		switch (static_cast<ParseErrc>(ev))
+		{
+		case ParseErrc::CannotReadInput:
+			return "input file doest exist or malformed";
+		default:
+			return "(unrecognized error)";
+		}
+	}
 
+	struct MergeErrorCategory : std::error_category
+	{
+		const char* name() const noexcept override;
+		std::string message(int ev) const override;
+	};
+
+	const char* MergeErrorCategory::name() const noexcept
+	{
+		return "Merge";
+	}
+
+	std::string MergeErrorCategory::message(int ev) const
+	{
+		switch (static_cast<MergeErrc>(ev))
+		{
+		case MergeErrc::CannotReadInput:
+			return "input file doest exist or malformed";
+		case MergeErrc::CannotCreateOutput:
+			return "cannot create or write to output";
+		default:
+			return "(unrecognized error)";
+		}
+	}
+
+	const ParseErrorCategory KTheParseErrorCategory{};
+	const MergeErrorCategory KTheMergeErrorCategory{};
+
+		
 }
