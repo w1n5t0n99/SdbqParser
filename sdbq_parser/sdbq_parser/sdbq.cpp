@@ -17,14 +17,13 @@ namespace sdbq
 
 		std::map<std::string, std::vector<sdbq::QuestionStats>> test_map;
 
-		auto tests = sdbq::GetUniqueTests(*total_questions);
+		auto tests = sdbq::GetUniqueTestsAndQuestions(*total_questions);
 		for (const auto& test : tests)
 		{
-			auto test_questions = GetTestQuestions(*total_questions, test);
-			auto stats = GetQuestionStats(test_questions);
+			auto stats = GetQuestionStats(test.second);
 
-			CreateStatFile(test + ".csv", stats);
-			test_map.insert({ test, std::move(stats) });
+			CreateStatFile(test.first + ".csv", stats);
+			test_map.insert({ test.first, std::move(stats) });
 		}
 
 		return { true, "file parsing completed." };

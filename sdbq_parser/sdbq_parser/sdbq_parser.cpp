@@ -93,8 +93,9 @@ namespace sdbq
 				response))
 			{
 
-				questions.push_back({ grade_str, test_name, retest, group_name, response, difficulty, item_descriptor,
-					last_name, first_name, middle_initial, division_name, school_name });
+				questions.push_back({ std::move(grade_str), std::move(test_name), std::move(retest), std::move(group_name), std::move(response),
+					std::move(difficulty), std::move(item_descriptor), std::move(last_name),std::move(first_name),
+					std::move(middle_initial), std::move(division_name), std::move(school_name) });
 			}
 		}
 		catch (io::error::can_not_open_file& err)
@@ -178,6 +179,22 @@ namespace sdbq
 		return unq_questions_vec;
 	}
 
+	std::vector<std::pair<std::string, std::vector<Question>>> GetUniqueTestsAndQuestions(const std::vector<Question>& questions)
+	{
+
+		std::map<std::string, std::vector<Question>> tests_map;
+
+		for (const auto& q : questions)
+			tests_map[q.test_name].push_back(q);
+
+		std::vector<std::pair<std::string, std::vector<Question>>> tests;
+
+		for (auto& t : tests_map)
+			tests.push_back(std::make_pair(std::move(t.first), std::move(t.second)));
+
+		return tests;
+	}
+
 	std::vector<std::string> GetUniqueDescriptors(const std::vector<Question>& questions)
 	{
 
@@ -194,7 +211,7 @@ namespace sdbq
 		return unq_questions_vec;
 	}
 
-	std::vector<Question> GetGradeQuestions(std::vector<Question>& questions, std::string_view grade)
+	std::vector<Question> GetGradeQuestions(const std::vector<Question>& questions, std::string_view grade)
 	{
 		std::vector<Question> grade_questions;
 
@@ -214,7 +231,7 @@ namespace sdbq
 		return grade_questions;
 	}
 
-	std::vector<Question> GetTestQuestions(std::vector<Question>& questions, std::string_view test_name)
+	std::vector<Question> GetTestQuestions(const std::vector<Question>& questions, std::string_view test_name)
 	{
 		std::vector<Question> test_questions;
 
@@ -234,7 +251,7 @@ namespace sdbq
 		return test_questions;
 	}
 
-	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions)
+	std::vector<QuestionStats> GetQuestionStats(const std::vector<Question>& questions)
 	{
 		std::vector<QuestionStats> question_stats;
 		// map the descriptor and difficulty to students

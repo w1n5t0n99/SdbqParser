@@ -18,11 +18,12 @@ int main(int argc, char** argv)
 
 	args::Group cmd_group(parser, "possible commands you can execute", args::Group::Validators::Xor);
 
-	args::Flag parse_flag(cmd_group, "parse", "the flag to parse all questions in csv", { 'p', "parse" });
-	args::Flag merge_flag(cmd_group, "merge", "the flag to merge several results", { 'm', "merge" });
+	args::ValueFlag<std::string> parse_flag(cmd_group, "parse", "parse sdbq file", { 'p', "parse" });
+	args::Group merge_group(cmd_group, "flags needed to execute merge", args::Group::Validators::All);
 
-	args::ValueFlag<std::string> output_value(parser, "output file name", "this is the output file to use", { 'o', "output" });
-	args::ValueFlagList<std::string> input_value(parser, "input files", "this is the input file(s) to use", { 'i', "input" });
+	args::Flag merge_flag(merge_group, "merge", "merge multiple results files", { 'm', "merge" });
+	args::ValueFlag<std::string> output_value(merge_group, "output file name", "this is the output file to use", { 'o', "output" });
+	args::ValueFlagList<std::string> input_value(merge_group, "input files names", "this is the input file(s) to use", { 'i', "input" });
 
 	try
 	{
@@ -51,22 +52,11 @@ int main(int argc, char** argv)
 
 	if (parse_flag)
 	{
-		if (input_value &&  args::get(input_value).size() > 1)
-		{
-			std::cerr << "error! - can only specify one input for parsing" << std::endl;
-			return 1;
-		}
-
-		if(output_value)
-		{
-			std::cerr << "error! - cannot specify output for parsing" << std::endl;
-			return 1;
-		}
-
+		
 		std::cout << "parsing... " << std::endl;
 		parse = true;
 
-		auto res = sdbq::Parse(args::get(input_value)[0]);
+		auto res = sdbq::Parse(args::get(parse_flag));
 		if(!res.first)
 		{
 			std::cerr << res.second << std::endl;
@@ -78,19 +68,6 @@ int main(int argc, char** argv)
 	{
 		std::cout << "merging... " << std::endl;
 		merge = true;
-
-		if (!output_value)
-		{
-			std::cerr << "error! - no output specified" << std::endl;
-			return 1;
-		}
-
-		if (!input_value)
-		{
-			std::cerr << "error! - no inputs specified" << std::endl;
-			return 1;
-		}
-
 
 		auto res = sdbq::Merge(args::get(output_value), args::get(input_value));
 		if (!res.first)
