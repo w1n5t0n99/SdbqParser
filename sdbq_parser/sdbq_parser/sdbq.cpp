@@ -1,6 +1,7 @@
 #include "sdbq.h"
 
 #include <map>
+#include <iostream>
 
 #include "sdbq_decls.h"
 #include "sdbq_parser.h"
@@ -16,8 +17,8 @@ namespace sdbq
 			return { false, "cannot read file: " + file_name };
 
 		std::map<std::string, std::vector<sdbq::QuestionStats>> test_map;
-
 		auto tests = sdbq::GetUniqueTestsAndQuestions(*total_questions);
+
 		for (const auto& test : tests)
 		{
 			auto stats = GetQuestionStats(test.second);

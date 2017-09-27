@@ -67,6 +67,7 @@ namespace sdbq
 			std::string middle_initial = {};
 			// question
 			std::string item_descriptor = {};
+			item_descriptor.reserve(100);
 			std::string response = {};
 			std::string difficulty = {};
 			// location 
@@ -92,10 +93,13 @@ namespace sdbq
 				difficulty,
 				response))
 			{
+				// append quotes on descriptor
+				item_descriptor.push_back('\"');
+				item_descriptor.insert(0, 1, '\"');
 
-				questions.push_back({ std::move(grade_str), std::move(test_name), std::move(retest), std::move(group_name), std::move(response),
-					std::move(difficulty), std::move(item_descriptor), std::move(last_name),std::move(first_name),
-					std::move(middle_initial), std::move(division_name), std::move(school_name) });
+				questions.push_back({grade_str, test_name, retest, group_name, response,
+					difficulty,item_descriptor,last_name,first_name,
+					middle_initial, division_name, school_name });
 			}
 		}
 		catch (io::error::can_not_open_file& err)
@@ -123,6 +127,7 @@ namespace sdbq
 				"unique incorrect");
 			
 			std::string descriptor = {};
+			descriptor.reserve(100);
 			std::string difficulty = {};
 			int total_correct = {};
 			int total_incorrect = {};
@@ -137,6 +142,10 @@ namespace sdbq
 				unique_correct,
 				unique_incorrect))
 			{
+
+				// append quotes on descriptor
+				descriptor.push_back('\"');
+				descriptor.insert(0, 1, '\"');
 
 				stats.push_back({ difficulty, descriptor, total_correct, total_incorrect, unique_correct, unique_incorrect });
 			}
@@ -299,7 +308,7 @@ namespace sdbq
 					stats.unique_incorrect.push_back(s.first);
 			}
 
-			std::replace(stats.descriptor.begin(), stats.descriptor.end(), ',', ';');
+			//std::replace(stats.descriptor.begin(), stats.descriptor.end(), ',', ';');
 
 			question_stats.push_back(stats);
 		}
