@@ -8,5 +8,6 @@ namespace sdbq
 
 	bool CreateStatFile(std::string file_name, const std::vector<QuestionStats> stats);
 
+	bool CreateStatFile(std::string file_name, const std::vector<ResultStats> stats);
 
 }

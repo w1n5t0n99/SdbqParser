@@ -11,7 +11,7 @@ namespace sdbq
 
 	std::pair<bool, std::string> Parse(const std::string file_name)
 	{
-		auto total_questions = sdbq::ParseSdbq(file_name, 50000);
+		auto total_questions = ParseSdbq(file_name, 50000);
 		if (!total_questions)
 			return { false, "cannot read file: " + file_name };
 
@@ -20,10 +20,10 @@ namespace sdbq
 		auto tests = sdbq::GetUniqueTests(*total_questions);
 		for (const auto& test : tests)
 		{
-			auto test_questions = sdbq::GetTestQuestions(*total_questions, test);
-			auto stats = sdbq::GetQuestionStats(test_questions);
+			auto test_questions = GetTestQuestions(*total_questions, test);
+			auto stats = GetQuestionStats(test_questions);
 
-			sdbq::CreateStatFile(test + ".csv", stats);
+			CreateStatFile(test + ".csv", stats);
 			test_map.insert({ test, std::move(stats) });
 		}
 
@@ -32,7 +32,29 @@ namespace sdbq
 
 	std::pair<bool, std::string> Merge(const std::string output_file, std::vector<std::string> input_files)
 	{
-		return {false, "temp"};
+		std::vector<std::vector<ResultStats>> results;
+
+		for (const auto& f : input_files)
+		{
+			auto res = ParseResults(f, 150);
+			if (!res)
+				return { false, "cannot read file: " + f };
+
+			results.push_back(std::move(*res));
+		}
+
+		std::vector<ResultStats> total_results;
+
+		for (const auto& r : results)
+			MergeResults(total_results, r);
+
+		if( output_file.find(".csv") == std::string::npos)
+			return { false, "cannot wrtie to file: " + output_file };
+
+		CreateStatFile(output_file, total_results);
+		
+		return { true, "file parsing completed." };
+
 	}
 
 }

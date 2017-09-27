@@ -10,7 +10,7 @@ namespace sdbq
 {
 	
 	std::optional<std::vector<Question>> ParseSdbq(std::string file_name, int count_estimate);
-	std::optional<std::vector<MergeStats>> ParseResults(std::string file_name, int count_estimate);
+	std::optional<std::vector<ResultStats>> ParseResults(std::string file_name, int count_estimate);
 
 
 	std::vector<std::string> GetUniqueGrades(const std::vector<Question>& questions);
@@ -23,5 +23,9 @@ namespace sdbq
 
 	std::vector<QuestionStats> GetQuestionStats(std::vector<Question>& questions);
 	std::vector<QuestionStats> MergeQuestionStats(const std::vector<QuestionStats>& stats0, const std::vector<QuestionStats>& stats1);
+	void MergeResults(std::vector<ResultStats>& total_stats, const std::vector<ResultStats>& stats);
+
+
+
 
 }

@@ -105,9 +105,9 @@ namespace sdbq
 		return questions;
 	}
 
-	std::optional<std::vector<MergeStats>> ParseResults(std::string file_name, int count_estimate)
+	std::optional<std::vector<ResultStats>> ParseResults(std::string file_name, int count_estimate)
 	{
-		std::vector<MergeStats> stats;
+		std::vector<ResultStats> stats;
 		stats.reserve(count_estimate);
 
 		try
@@ -137,7 +137,7 @@ namespace sdbq
 				unique_incorrect))
 			{
 
-				stats.push_back({ descriptor, difficulty, total_correct, total_incorrect, unique_correct, unique_incorrect });
+				stats.push_back({ difficulty, descriptor, total_correct, total_incorrect, unique_correct, unique_incorrect });
 			}
 		}
 		catch (io::error::can_not_open_file& err)
@@ -322,6 +322,31 @@ namespace sdbq
 			merged_questions.push_back(std::move(s.second));
 
 		return merged_questions;
+	}
+
+	void MergeResults(std::vector<ResultStats>& total_stats, const std::vector<ResultStats>& stats)
+	{
+		std::map<std::pair<std::string, std::string>, ResultStats> result_map;
+		for (const auto& s : total_stats)
+			result_map.insert({ { s.descriptor, s.difficulty }, s });
+
+		for (const auto& s : stats)
+		{
+			auto&[it, success] = result_map.insert({ {s.descriptor, s.difficulty}, s });
+
+			if (!success)
+			{
+				it->second.total_correct += s.total_correct;
+				it->second.total_incorrect += s.total_incorrect;
+				it->second.unique_correct += s.unique_correct;
+				it->second.unique_incorrect += s.unique_incorrect;
+			}
+		}
+
+		total_stats.clear();
+		for (auto& r : result_map)
+			total_stats.push_back(std::move(r.second));
+
 	}
 
 }

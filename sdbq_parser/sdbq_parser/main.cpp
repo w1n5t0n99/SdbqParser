@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 {
 	using namespace std::chrono_literals;
 
-	args::ArgumentParser parser("RCPS sqdb parser.", "This goes after the options.");
+	args::ArgumentParser parser("rcps sqdb parser.");
 	args::HelpFlag help(parser, "help", "Display this help menu", { 'h', "help" });
 
 	args::Group cmd_group(parser, "possible commands you can execute", args::Group::Validators::Xor);
